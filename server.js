@@ -5,7 +5,11 @@ const User = require('./models/User');
 const Recipe = require('./models/Recipe'); // Ensure Recipe model is imported
 const bcrypt = require('bcryptjs');
 
+const cors = require('cors'); // Import CORS
 const app = express();
+
+app.use(cors()); // Use CORS middleware
+
 
 const PORT = 3000;
 app.use(express.json());
